@@ -28,4 +28,23 @@ Runs the server in development mode.
 
 
 ## Run app with Docker
-Information coming..
+Open [http://localhost:3000/](http://localhost:3000/) to view it in the browser.
+
+Clone the repository to get a clean install.
+
+```
+docker-compose up
+```
+Starts app.
+
+
+```
+docker-compose up -d
+```
+
+Starts app in detached mode. 
+
+```
+docker-compose down
+```
+Close down the docker container, stops running app.
