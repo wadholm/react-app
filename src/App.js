@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import React from "react";
+import Article from "./components/article"
+import Background from "./components/background";
+import Numbers from "./components/numbers";
+import Footer from "./components/footer";
 import './App.css';
 
 function App() {
+  const [data, setData] = React.useState([]);
+
+  React.useEffect(() => {
+    // fetch data
+    const dataFetch = async () => {
+      const data = await (
+        await fetch(
+          "http://numbersapi.com/1..51"
+        )
+      ).json();
+      // set state when the data received
+      setData(Object.entries(data));
+    };
+
+    dataFetch();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Background />
+    <Article/>
+    <Numbers data={data}/>
+    <Footer />
+    </>
   );
 }
 
