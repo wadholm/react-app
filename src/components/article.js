@@ -9,7 +9,7 @@ function Article() {
     <h1>Vanilla JS Generic App</h1>
 </header>
 <article>
-    <p>This is a sample web page, displaying interesting facts about numbers, gathered from the <a href="http://numbersapi.com/">NUMBERSAPI</a>. This web page is created as part of an experiment for my bachelor&apos;s free thesis at Blekinge Institute of Technology. </p>
+    <p>This is a sample web page, displaying interesting facts about numbers, gathered from the <a href="http://numbersapi.com/">NUMBERSAPI</a>. This web page is created as part of an experiment for my bachelor&apos;s thesis at Blekinge Institute of Technology. </p>
 </article>
 </div>
 <div className="img-div">
